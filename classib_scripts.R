@@ -52,6 +52,16 @@ levels(patient_info$Smoker_fac)
 patient_info$Smoker_num <-factor(patient_info$Smoker_fac,
                                  levels=c("Yes","No"),
                                  labels=c(1,0))
+#Save the file
+
+write.csv(patient_info, file = "patient_info_clean.csv/patient_data.csv")
+
+#Save the entire R workspacew
+save.image(file="full_workspace.RData")
+
+#Save selected objects
+save(patient_info,file=workspace.RData")
+
 
 
 
